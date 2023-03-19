@@ -18,7 +18,7 @@ app.get("/subtract", (req, res) => {
 
 app.get("/multiply", (req, res) => {
     const {x, y} = req.query;
-    const product = parseInt(x) * parseInt(y);
+    const product = parseOperands(x,y) 
     res.send(200, product);
 });
 
